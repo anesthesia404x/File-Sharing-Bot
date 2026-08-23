@@ -6,10 +6,11 @@ from pyrogram.enums import ParseMode
 import sys
 from datetime import datetime
 from config import API_HASH, API_ID, LOGGER, BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID, PORT
-import pyrogram.utils
 
-pyrogram.utils.MIN_CHANNEL_ID = -1009999999999
+from pyrogram import utils as pyroutils
 
+pyroutils.MIN_CHAT_ID = -999999999999
+pyroutils.MIN_CHANNEL_ID = -100999999999999
 
 
 class Bot(Client):
